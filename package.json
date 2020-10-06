@@ -6,7 +6,6 @@
   "scripts": {
     "start": "nodemon -r esm -r dotenv/config src",
     "up": "mkdir -p data && docker-compose up -d"
-    
   },
   "directories": {
     "src": "src"
