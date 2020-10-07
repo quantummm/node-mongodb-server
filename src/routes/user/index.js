@@ -10,8 +10,4 @@ routes.use(register);
 routes.use(login);
 routes.use(profile);
 
-//const rootRouter = Router();
-
-//rootRouter.use("/", routes);
-
 export default routes;

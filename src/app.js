@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import session from "express-session";
 import Redis from "ioredis";
 import connectRedis from "connect-redis";
-import routes from "./routes/user";
+import routes from "./routes";
 import { serverError, notFound } from "./middleware";
 import {
   REDIS_OPTIONS,
