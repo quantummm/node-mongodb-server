@@ -1,16 +1,16 @@
-import express from "express";
-import mongoose from "mongoose";
-import session from "express-session";
-import Redis from "ioredis";
-import connectRedis from "connect-redis";
-import routes from "./routes";
-import { serverError, notFound } from "./middleware";
+import express from 'express';
+import mongoose from 'mongoose';
+import session from 'express-session';
+import Redis from 'ioredis';
+import connectRedis from 'connect-redis';
+import routes from './routes';
+import { serverError, notFound } from './middleware';
 import {
   REDIS_OPTIONS,
   MONGO_URI,
   MONGO_OPTIONS,
   SESSION_OPTIONS,
-} from "./config";
+} from './config';
 
 const app = express();
 mongoose.Promise = global.Promise;
@@ -22,7 +22,7 @@ mongoose
   })
   .catch((err) => {
     console.log(
-      "MongoDB connection error. Please make sure MongoDB is running. " + err
+      'MongoDB connection error. Please make sure MongoDB is running. ' + err
     ); // process.exit();
   });
 
@@ -41,7 +41,7 @@ app.use(
 
 app.use(express.json());
 
-app.use("/api/v1", routes);
+app.use('/api/v1', routes);
 
 app.use(notFound);
 app.use(serverError);
